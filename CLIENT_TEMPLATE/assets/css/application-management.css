@@ -1,0 +1,514 @@
+.search-by-username{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.search-by-appname{
+	margin-top: 10px;
+}
+
+.select-from-date{
+	padding-left: 0px;
+}
+
+.manage-app-selection-wrapper{
+	float: left;
+	margin-right: 40px;
+	margin-top: 10px;
+}
+
+.manage-app-selection-wrapper>label{
+	font-weight: normal;
+}
+
+.checkbox-manage-application-wrapper{
+
+}
+
+
+
+
+body{
+        margin: 0px auto;
+        padding: 0px;
+        float: none;
+    }
+    .admin-header {
+        width: 100%;
+        background-color: #222;
+        border-color: #080808;
+        clear: both;
+    }
+    
+    .header-inside-wrapper {
+        width: 100%;
+    }
+    
+    .header-inside-text {
+        margin-right: 0px;
+        margin-left: 0px;
+        line-height: 28px;
+    }
+    
+    .navbar-inverse .navbar-name {
+        color: #ffe4c4;
+    }
+    
+    .navbar-inverse .navbar-other-link {
+        color: #f0f8ff;
+    }
+    
+    .navbar-inverse .logo-text {
+        color: #f0f8ff;
+    }
+    
+    .menu-block {
+        padding: 15px 15px 15px 5px;
+        margin: 4%;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        text-align: left;
+        display: none;
+    }
+    
+    .menu-block:hover {
+        cursor: pointer;
+    }
+    
+    .block-menu-wrapper {
+        margin: 0px auto;
+        padding: 0px;
+    }
+    
+    .admin-content-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: left;
+        margin: 0px auto;
+        float: none;
+        padding: 0px;
+    }
+    
+    .menu-item {
+        margin-right: 10px;
+    }
+    
+    .panel-success>.panel-heading {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    
+    .custom-pagination {
+        float: left;
+        padding-right: 0px;
+    }
+    
+    .search-box {
+        margin: 0px auto;
+        padding: 0px;
+        min-height: 320px;
+    }
+    
+    .search-box-portion {
+        margin: 20px auto 50px auto;
+        padding: 0px;
+        position: relative;
+        float: none;
+    }
+    
+    .search-element {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .search-element-title {
+        position: relative;
+        left: 0px;
+    }
+    
+    button.search-element-btn {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: 5px;
+        height: 36px;
+        line-height: 20px;
+    }
+    
+    .light-box {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        display: none;
+        overflow: hidden;
+        clear: both;
+    }
+    
+    .function-field {
+        text-align: center;
+    }
+    
+    .function-field a {
+        margin-right: 5px;
+        margin-left: 5px;
+        text-decoration: underline;
+    }
+    /*User details dialog*/
+    
+    .app-detail-dialog {
+       /* padding-left: 0px;
+        padding-right: 0px;
+        position: absolute;
+        top: 10%;
+        left: 29%;
+        z-index: 3;
+        display: none;*/
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+    .app-detail-dialog-content p {
+        text-align: left;
+        padding-left: 40px;
+    }
+    
+    .btn-app-functions {
+        margin-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .close-item {
+        float: right;
+        cursor: pointer;
+    }
+    
+    .close-item-btn {
+        cursor: pointer;
+    }
+    
+    .app-details-functions-wrapper {
+        display: inline-block;
+        margin-top: 20px;
+        float: left;
+        width: 100%;
+    }
+    /*Update users portions*/
+    
+    .update-app-dialog {
+        /*padding-left: 0px;
+        padding-right: 0px;
+        position: absolute;
+        float: none;
+        z-index: 3;
+        display: none;*/
+
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+   /* .app-detail-dialog-content div {
+        padding-left: 40px;
+    }*/
+    
+    .update-element-wrapper {
+        display: inline-block;
+        width: 100%;
+        /*padding-left: 40px;*/
+        margin-bottom: 10px;
+    }
+    
+    .update-element-wrapper input {
+        float: right;
+        /*margin-right: 40px;*/
+        border-radius: 3px;
+        padding-left: 10px;
+    }
+    
+    .reset-password-user {
+        color: red;
+        text-decoration: underline;
+    }
+    
+    .reset-password-user:hover {
+        color: red;
+    }
+    
+    .deactivate-user {
+        margin-left: 25%;
+    }
+    
+    .app-data-title {
+        float: left;
+        text-align: left;
+    }
+    
+    .app-data {
+        float: left;
+        text-align: left;
+        padding: 0px;
+    }
+
+    /*Reset password portion*/
+    
+    .reset-password-ensurance-dialog {
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+    .reset-password-warning-title {
+        text-align: center;
+    }
+    
+    .reset-password-option {
+        display: inline-block;
+        margin-top: 20px;
+        float: right;
+    }
+    /*Deactivate user*/
+    
+    .deactivate-app-ensurance-dialog {
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+    /*display responsive*/
+    .mobile-menu-functions{
+        display: none;
+    }
+
+    .activate-application-wrapper{
+    	padding: 0px;
+    }
+
+    .activate-application{
+	    width: 50%;
+		float: left;
+    }
+
+    .select-application-level{
+    	margin-right: 0px;
+    	margin-top: 0px;
+    }
+
+    .select-by-date{
+    	padding: 20px 0px 0px 0px;
+    }
+
+    .select-by-date-portion:nth-child(1){
+    	padding: 0px;
+    	margin-right: 10px;
+    }
+
+    .select-by-date-portion:nth-child(2){
+    	padding: 0px;
+    	margin-left: 10px;
+    }
+
+    .select-by-date-portion span{
+    	padding: 0px;
+    }
+
+    .input-group .form-control{
+    	z-index: 1;
+    }
+
+    @media screen and (max-width: 480px) {
+        .search-element-title {
+            top: -30px;
+            position: absolute;
+            margin-left: 0px;
+        }
+        .search-element{
+            padding-left: 0px;
+            padding-right: 0px;
+            position: relative;
+        }
+        button.search-element-btn{
+            padding-left: 15%;
+		    padding-right: 15%;
+		    height: 36px;
+		    line-height: 20px;
+		    right: 0px;
+		    border-radius: 0px;
+		    margin-left: calc(50% - 60px);
+		    width: 120px;
+        }
+
+        .app-detail-dialog{
+            margin: 0px auto;
+            height: 100%;
+        }
+        .light-box{
+            background-color: white;
+        }
+
+        .update-app-dialog{
+            margin: 0px auto;
+            height: 100%;
+        }
+
+        .manage-app-selection-wrapper:nth-child(1){
+        	float: left;
+		    margin-top: 10px;
+		    margin-right: 0px;
+        }
+
+        .manage-app-selection-wrapper:nth-child(2) {
+        	float: right;
+        	margin-right: 0px;
+        }
+
+        .checkbox-manage-application-wrapper{
+        	padding: 0px;
+        }
+        .my-checkbox{
+        	width: 100%;
+        }
+        .search-by-username{
+        	margin-left: 0px;
+        }
+        .search-small-wrapper{
+        	min-height: 50px;
+        	padding-top: 10px;
+			padding-bottom: 10px;
+        }
+
+        .select-from-date{
+        	padding-left: 0px;
+        	padding-right: 0px;
+        }
+        .select-by-date-portion:nth-child(2){
+    		padding: 0px;
+    		margin-left: 0px;
+    	}
+    }
+
+    @media screen and (max-width: 492px) {
+        .menu-app-function{
+            display: none;
+        }
+        .glyphicon-menu-hamburger{
+            font-size: 27px;
+            line-height: 2.2;
+            position: absolute;
+            right: 10px;
+            color: #f0f8ff;
+        }
+        .glyphicon-menu-hamburger:hover{
+            cursor: pointer;
+        }
+        .mobile-menu-functions{
+            position: fixed;
+            height: 100%;
+            z-index: 3;
+            width: 100%;
+            display: none;
+            background-color: #3a3a3a;
+        }
+
+        .mobile-menu-functions{
+            color: #f0f8ff;
+            background-color: #3a3a3a;
+        }
+
+        .mobile-menu-functions li{
+            background-color: #3a3a3a;   
+        }
+
+        .mobile-menu-functions li a{
+            color: #f0f8ff;
+            width: 100%;
+            height: 100%;
+        }
+        .mobile-menu-functions li:firstchild{
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+        }
+        .mobile-menu-functions li img{
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (min-width: 492px) and (max-width: 768px) {
+        .menu-app-function {
+            float: right;
+        }
+        .glyphicon-menu-hamburger{
+           display: none;
+        }
+
+    }
+
+    @media screen and (min-width: 768px){
+        .glyphicon-menu-hamburger{
+            display: none;
+        }
+        .search-box-portion {
+            margin: 20px auto 50px auto;
+            padding: 0px;
+            position: relative;
+            float: none;
+        }
+        .search-element {
+            padding-left: 0px;
+            padding-right: 0px;
+            /*width: 80%;*/
+        }
+
+        button.search-element-btn{
+            padding-left: 5%;
+            padding-right: 5%;
+            position: relative;
+            border-radius: 0px;
+            height: 35px;
+            line-height: 20px;
+            float: right;
+            margin-bottom: 30px;
+        }
+
+        .search-small-wrapper{
+            width: 100%;
+            position: relative;
+            float: left;
+            margin-top: 10px;
+            margin-right: 0px;
+            padding: 0px;
+        }
+    }

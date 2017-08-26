@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADMIN AUTHENTICATION</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/form-elements.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"> -->
+    <style type="text/css" media="screen">
+    body{
+        margin: 0px auto;
+        padding: 0px;
+        float: none;
+    }
+    .admin-header {
+        width: 100%;
+        background-color: #222;
+        border-color: #080808;
+        clear: both;
+    }
+    
+    .header-inside-wrapper {
+        width: 100%;
+    }
+    
+    .header-inside-text {
+        margin-right: 0px;
+        margin-left: 0px;
+        line-height: 28px;
+    }
+    
+    .navbar-inverse .navbar-name {
+        color: #ffe4c4;
+    }
+    
+    .navbar-inverse .navbar-other-link {
+        color: #f0f8ff;
+    }
+    
+    .navbar-inverse .logo-text {
+        color: #f0f8ff;
+    }
+    
+    .menu-block {
+        padding: 15px 15px 15px 5px;
+        margin: 4%;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        text-align: left;
+        display: none;
+    }
+    
+    .menu-block:hover {
+        cursor: pointer;
+    }
+    
+    .block-menu-wrapper {
+        margin: 0px auto;
+        padding: 0px;
+    }
+    
+    .admin-content-wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: left;
+        margin: 0px auto;
+        float: none;
+        padding: 0px;
+    }
+    
+    .menu-item {
+        margin-right: 10px;
+    }
+    
+    .panel-success>.panel-heading {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    
+    .custom-pagination {
+        float: left;
+    }
+    
+    .search-box {
+        margin: 0px auto;
+        padding: 0px;
+    }
+    
+    .search-box-portion {
+        margin: 20px auto 50px auto;
+        padding: 0px;
+        position: relative;
+        float: none;
+    }
+    
+    .search-element {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .search-element-title {
+        /*margin-bottom: 10px;
+        margin-left: 15px;
+        */
+
+        top: -30px;
+        position: absolute;
+        left: 0px;
+    }
+    
+    button.search-element-btn {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: 5px;
+        height: 36px;
+        line-height: 20px;
+    }
+    
+    .light-box {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        display: none;
+        overflow: hidden;
+        clear: both;
+    }
+    
+    .function-field {
+        text-align: center;
+    }
+    
+    .function-field a {
+        margin-right: 5px;
+        margin-left: 5px;
+        text-decoration: underline;
+    }
+    /*User details dialog*/
+    
+    .user-detail-dialog {
+       /* padding-left: 0px;
+        padding-right: 0px;
+        position: absolute;
+        top: 10%;
+        left: 29%;
+        z-index: 3;
+        display: none;*/
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+    .user-detail-dialog-content p {
+        text-align: left;
+        padding-left: 40px;
+    }
+    
+    .btn-user-functions {
+        margin-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .close-item {
+        float: right;
+        cursor: pointer;
+    }
+    
+    .close-item-btn {
+        cursor: pointer;
+    }
+    
+    .user-details-functions-wrapper {
+        display: inline-block;
+        margin-top: 20px;
+        float: left;
+        width: 100%;
+    }
+    /*Update users portions*/
+    
+    .update-user-dialog {
+        /*padding-left: 0px;
+        padding-right: 0px;
+        position: absolute;
+        float: none;
+        z-index: 3;
+        display: none;*/
+
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+    .user-detail-dialog-content div {
+        padding-left: 40px;
+    }
+    
+    .update-element-wrapper {
+        display: inline-block;
+        width: 100%;
+        /*padding-left: 40px;*/
+        margin-bottom: 10px;
+    }
+    
+    .update-element-wrapper input {
+        float: right;
+        /*margin-right: 40px;*/
+        border-radius: 3px;
+        padding-left: 10px;
+    }
+    
+    .reset-password-user {
+        color: red;
+        text-decoration: underline;
+    }
+    
+    .reset-password-user:hover {
+        color: red;
+    }
+    
+    .deactivate-user {
+        margin-left: 25%;
+    }
+    
+    .user-data-title {
+        float: left;
+        width: 22%;
+        text-align: left;
+    }
+    
+    .user-data {
+        float: left;
+        text-align: left;
+        padding-left: 70px;
+    }
+
+    /*Reset password portion*/
+    
+    .reset-password-ensurance-dialog {
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+    .reset-password-warning-title {
+        text-align: center;
+    }
+    
+    .reset-password-option {
+        display: inline-block;
+        margin-top: 20px;
+        float: right;
+    }
+    /*Deactivate user*/
+    
+    .deactivate-user-ensurance-dialog {
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+        float: none;
+        z-index: 3;
+        display: none;
+        clear: both;
+        margin: 100px auto;
+        padding: 0px;
+    }
+    
+    /*display responsive*/
+    .mobile-menu-functions{
+        display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+        .search-element-title {
+            top: -30px;
+            position: absolute;
+            margin-left: 0px;
+        }
+        .search-element{
+            padding-left: 0px;
+            padding-right: 0px;
+            position: absolute;
+            width: 80%;
+            top: 1px;
+        }
+        button.search-element-btn{
+            padding-left: 7%;
+            padding-right: 7%;
+            height: 36px;
+            line-height: 20px;
+            right: 0px;
+            border-radius: 0px;
+            position: absolute;
+            width: 20%;
+        }
+
+        .user-detail-dialog{
+            margin: 0px auto;
+            height: 100%;
+        }
+        .light-box{
+            background-color: white;
+        }
+
+        .update-user-dialog{
+            margin: 0px auto;
+            height: 100%;
+        }
+    }
+
+    @media screen and (max-width: 492px) {
+        .menu-user-function{
+            display: none;
+        }
+        .glyphicon-menu-hamburger{
+            font-size: 27px;
+            line-height: 2.2;
+            position: absolute;
+            right: 10px;
+            color: #f0f8ff;
+        }
+        .glyphicon-menu-hamburger:hover{
+            cursor: pointer;
+        }
+        .mobile-menu-functions{
+            position: fixed;
+            height: 100%;
+            z-index: 3;
+            width: 100%;
+            display: none;
+            background-color: #3a3a3a;
+        }
+
+        .mobile-menu-functions{
+            color: #f0f8ff;
+            background-color: #3a3a3a;
+        }
+
+        .mobile-menu-functions li{
+            background-color: #3a3a3a;   
+        }
+
+        .mobile-menu-functions li a{
+            color: #f0f8ff;
+            width: 100%;
+            height: 100%;
+        }
+        .mobile-menu-functions li:firstchild{
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+        }
+        .mobile-menu-functions li img{
+            width: 60px;
+            height: 60px;
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (min-width: 492px) and (max-width: 768px) {
+        .menu-user-function {
+            float: right;
+        }
+        .glyphicon-menu-hamburger{
+           display: none;
+        }
+
+    }
+
+    @media screen and (min-width: 768px){
+        .glyphicon-menu-hamburger{
+            display: none;
+        }
+        .search-box-portion {
+            margin: 20px auto 50px auto;
+            padding: 0px;
+            position: relative;
+            float: none;
+        }
+        .search-element {
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 80%;
+        }
+
+        button.search-element-btn{
+            padding-left: 5%;
+            padding-right: 5%;
+            position: absolute;
+            top: 0px;
+            border-radius: 0px;
+            height: 35px;
+            line-height: 20px;
+            margin-left: 0px;
+        }
+    }
+    
+    </style>
+</head>
+
+<body>
+    
+    
+    <!-- This is view user's details dialog -->
+    <div id="user-detail-light-box" class="light-box">
+        <div class="col-lg-5 col-xs-12 col-md-8 col-sm-10 panel panel-success deactivate-user-ensurance-dialog"
+         id="deactivate-user-ensurance-dialog">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Deactivate User
+                </div>
+            </div>
+            <div class="panel-body ">
+                <div class="">
+                    <span class="reset-password-warning-title">Are you sure, you want to deactivate this user?</span>
+                </div>
+                <div class="nav-stacked reset-password-option">
+                    <button class="btn btn-success" id="do-activate-user">Yes. Deactivate</button>
+                    <button class="btn btn-default " id="cancel-activate">No. Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-xs-12 col-md-8 col-sm-10 panel panel-success reset-password-ensurance-dialog" 
+        id="reset-password-ensurance-dialog">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Reset Password
+                </div>
+            </div>
+            <div class="panel-body ">
+                <div class="">
+                    <span class="reset-password-warning-title">Are you sure, you want to reset password of this user?</span>
+                </div>
+                <div class="nav-stacked reset-password-option">
+                    <button class="btn btn-success" id="do-reset-password">Yes. Reset</button>
+                    <button class="btn btn-default " id="cancel-reset">No. Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-xs-12 col-md-8 col-sm-10 panel panel-success user-detail-dialog" id="user-details-dialog">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    User Details
+                    <span class="close-item" id="close-user-details">X</span>
+                </div>
+            </div>
+            <div class="panel-body user-detail-dialog-content">
+                <div class="update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">ID:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">000001</span>
+                </div>
+                <div class="update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Name:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">Nguyen Minh An</span>
+                </div>
+                <div class="update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Email:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">an92cy@gmail.com</span>
+                </div>
+                <div class="update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Phone:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">0163 5850 584</span>
+                </div>
+                <div class="update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Status:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">Active</span>
+                </div>
+                <div class="update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Number of apps:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">5 (<a href="#">View applications</a>)</span>
+                </div>
+                <div class="update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Registered Date:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">04/08/2017</span>
+                </div>
+                <div class="nav-stacked user-details-functions-wrapper">
+                    <button class="btn btn-success btn-user-functions btn-update-user" id="go-to-update">Update</button>
+                    <button class="btn btn-default btn-user-functions close-item-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+    <!-- This is update user's dialog -->
+    <!-- <div id="update-user-light-box" class="light-box ">  -->
+        <div class="col-lg-6 col-xs-12 col-md-8 col-sm-10 panel panel-success update-user-dialog" id="update-user-dialog">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Update User
+                    <span class="close-item" id="close-update-user">X</span>
+                </div>
+            </div>
+            <div class="panel-body update-user-dialog-content">
+                <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Name:</span>
+                    <input type="text" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" value="Nguyen Minh An"></input>
+                </div>
+                <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Phone:</span>
+                    <input type="text" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" value="0163 5850 584"></input>
+                </div>
+                <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Address:</span>
+                    <input type="text" class="col-lg-8 col-md-8 col-sm-8 col-xs-8" value="Nguyen Minh An"></input>
+                </div>
+                <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Status:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data">Active  <button class="btn btn-danger deactivate-user" id="show-activate-user-inform">Deactivate</a></span>
+                </div>
+                <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 update-element-wrapper">
+                    <span class="col-lg-4 col-xs-4 col-md-4 col-sm-4 user-data-title">Status:</span>
+                    <span class="col-lg-8 col-md-8 col-sm-8 col-xs-8 user-data"><a class="reset-password-user" id="reset-password-warning" href="#">Reset Password</a></span>
+                </div>
+                <div class="nav-stacked user-details-functions-wrapper">
+                    <button class="btn btn-success btn-user-functions btn-update-user" id="do-update-user">Apply</button>
+                    <button class="btn btn-default btn-user-functions close-item-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the header including menu -->
+    <header id="header" class="admin-header">
+        <nav class="navbar navbar-inverse" id="desktop-menu-id">
+            <div class="container-fluid">
+                <div class="navbar-header header-inside-wrapper">
+                    <div class="admin-header-logo">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="assets/img/admin.ico" width="30" height="30">
+                    </a>
+                    <p class="navbar-brand navbar-left header-inside-text logo-text">ADMIN</p>
+                    </div>
+                    <div  class="glyphicon glyphicon-menu-hamburger" id="mobile-menu"></div>
+                    <p class="navbar-brand navbar-right header-inside-text menu-user-function">Hello
+                        <a href="#" class="navbar-link navbar-name">Minh An</a> |
+                        <a href="admin-management.html" class="navbar-link navbar-other-link">My Account</a> |
+                        <a href="#" class="navbar-link navbar-other-link">Logout</a>
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <ul class="list-group mobile-menu-functions" id="mobile-menu-functions-id">
+          <li class="list-group-item"><img alt="Brand" src="assets/img/admin.ico" width="30" height="30"></li>
+          <li class="list-group-item" id="back-to-previous-screen">Back</li>
+          <li class="list-group-item">My Account</li>
+          <li class="list-group-item">Logout</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </header>
+    <!-- /header -->
+    <!-- This is the content part -->
+    <main class="col-xs-12 col-lg-9 col-md-12 com-sm-12 panel panel-success admin-content-wrapper">
+        <div class="panel-heading">
+            <h3 class="panel-title">User Management</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-12 search-box">
+                <!-- <form action="" method="POST" class="form-inline" role="form"> -->
+                
+               <div class="col-lg-8 col-xs-12 col-md-8 col-sm-8 search-box-portion">
+                    <label class="search-element-title">Search</label>
+                    <input type="email" class="col-xs-10 col-lg-8 col-md-8 col-sm-12 search-element" id="" placeholder="Input field">
+                    <button type="submit" class="btn btn-success search-element-btn glyphicon glyphicon-search"></button>
+                </div>
+                <!-- </form> -->
+            </div>
+            <div class="col-xs-12 table-responsive">
+                <table class="col-xs-12 table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="col-xs-1 id-field">ID</th>
+                            <th class="col-xs-4 name-field">Name</th>
+                            <th class="col-xs-1 status-field">Status</th>
+                            <th class="col-xs-1">Status</th>
+                            <th class="col-xs-1">Status</th>
+                            <th class="col-xs-1">Status</th>
+                            <th class="col-xs-3 function-field">Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="col-xs-1 id-field" scope="row">1</th>
+                            <td class="col-xs-4 name-field">Mark</td>
+                            <td class="col-xs-1 status-field">Otto</td>
+                            <td class="col-xs-1">Otto</td>
+                            <td class="col-xs-1">Otto</td>
+                            <td class="col-xs-1">Otto</td>
+                            <td class="col-xs-5 function-field">
+                                <a class="view-user-details" href="#">View</a>
+                                <a class="update-user" href="#">Update</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="col-xs-1 id-field" scope="row">2</th>
+                            <td class="col-xs-4 name-field">Jacob</td>
+                            <td class="col-xs-1 status-field">Thornton</td>
+                            <td class="col-xs-1">Thornton</td>
+                            <td class="col-xs-1">Thornton</td>
+                            <td class="col-xs-1">Thornton</td>
+                            <td class="col-xs-5 function-field">
+                                <a class="view-user-details" href="#">View</a>
+                                <a class="update-user" href="#">Update</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="col-xs-1 id-field" scope="row">3</th>
+                            <td class="col-xs-4 name-field">Larry</td>
+                            <td class="col-xs-1 status-field">the Bird</td>
+                            <td class="col-xs-1">the Bird</td>
+                            <td class="col-xs-1">the Bird</td>
+                            <td class="col-xs-1">the Bird</td>
+                            <td class="col-xs-5 function-field">
+                                <a class="view-user-details" href="#">View</a>
+                                <a class="update-user" href="#">Update</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav class="custom-pagination" aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".close-item").click(function() {
+            /*var eleId = "#" + $(".close-item").attr("id") + '-dialog';*/
+            $("#update-user-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $(".light-box").slideUp("fast");
+        });
+        $(".close-item-btn").click(function() {
+            /*var eleId = "#" + $(".close-item").attr("id") + '-dialog';*/
+            $("#update-user-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $(".light-box").slideUp("fast");
+        });
+
+
+        $(".view-user-details").click(function() {
+            $("#user-details-dialog").slideDown("fast");
+            $(".light-box").slideDown("fast");
+        });
+        $(".update-user").click(function() {
+            $("#update-user-dialog").slideDown("fast");
+            $(".light-box").slideDown("fast");
+        });
+        $("#go-to-update").click(function() {
+            $("#user-details-dialog").slideUp("fast");
+            $("#update-user-dialog").slideDown("fast");
+        });
+        $("#do-update-user").click(function() {
+            $("#update-user-dialog").slideUp("fast");
+            $(".light-box").slideUp("fast");
+        });
+        $("#reset-password-warning").click(function() {
+            $("#update-user-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $("#reset-password-ensurance-dialog").slideDown("fast");
+        });
+        $("#do-reset-password").click(function() {
+            $("#reset-password-ensurance-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $("#update-user-dialog").slideDown("fast");
+        });
+        $("#cancel-reset").click(function() {
+            $("#reset-password-ensurance-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $("#update-user-dialog").slideDown("fast");
+        });
+        $("#show-activate-user-inform").click(function() {
+            $("#update-user-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $("#deactivate-user-ensurance-dialog").slideDown("fast");
+        });
+        $(".deactivate-user-show").click(function() {
+            $("#update-user-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $("#deactivate-user-ensurance-dialog").slideDown("fast");
+            $(".light-box").slideDown("fast");
+        });
+        $("#do-activate-user").click(function() {
+            $("#deactivate-user-ensurance-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $("#update-user-dialog").slideDown("fast");
+        });
+
+        $("#cancel-activate").click(function() {
+            $("#deactivate-user-ensurance-dialog").slideUp("fast");
+            $("#user-details-dialog").slideUp("fast");
+            $("#update-user-dialog").slideDown("fast");
+        });
+
+        $("#mobile-menu").click(function(){
+            $("#mobile-menu-functions-id").slideDown("fast");
+            $("#desktop-menu-id").slideUp("fast");
+        });
+
+        $("#back-to-previous-screen").click(function(){
+            $("#mobile-menu-functions-id").slideUp("fast");
+            $("#desktop-menu-id").slideDown("fast");
+            
+        });
+    });
+    </script>
+    <!-- <script src="assets/js/scripts.js"></script> -->
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+</body>
+
+</html>

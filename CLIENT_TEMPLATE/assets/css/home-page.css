@@ -1,0 +1,249 @@
+.admin-header{
+    width: 100%;
+    background-color: #222;
+    border-color: #080808;
+}
+
+.service-image-portion{
+    min-height: 600px;
+    background-color: #1e9ad6;
+}
+
+.image-block{
+    background-image: url(../../assets/img/presenting-image.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 48%;
+    height: 400px;
+    background-size: 269px 150px;
+}
+
+.service-description{
+    background-color: #eaeaea;
+    min-height: 400px;
+}
+
+.application-description{
+    min-height: 400px;
+    padding-left: 20px;
+    color: #f0f8ff;
+}
+
+.application-description h1{
+    color: #f0f8ff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.application-description h4{
+    color: #f0f8ff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.feature-stick-icon{
+    margin-right: 10px;
+}
+
+.client-top-menu{
+    background-color: #015b86;
+    border-color: #015b86;
+    background-image: none;
+    padding-left: 15%;
+    padding-right: 20%;
+}
+
+.client-top-menu a{
+    color: #f0f8ff;
+}
+
+
+.client-top-menu div{
+    color: #f0f8ff;
+}
+
+.client-top-menu img{
+    width: 30px;
+    height: 30px;
+    /*margin-top: 5px;*/
+}
+
+
+
+/*Login portion*/
+.feature-portion{
+    padding-bottom: 100px;
+    background-color: #1e9ad6;
+    min-height: 400px;
+}
+
+.signin-form-wrapper, .signup-form-wrapper{
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    border: 1px solid #72abc7;
+    margin-top: 100px;
+    color: #f0f8ff;
+    padding: 10px;
+}
+
+.login-line-space{
+    border-top: 2px solid #1e9ad6;
+}
+
+.input-font-size{
+    font-size: 1.5rem;
+}
+
+.receive-password-wrapper{
+    text-align: right;
+}
+
+
+
+
+
+/*Responsive for menu*/
+
+@media (max-width: 576px) {
+    .mobile-menu-functions{
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 3;
+        height: 100%;
+        background-color: #1e9ad6;
+    }
+    .mobile-menu-functions img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .list-group-item{
+        color: white;
+        background-color: #1e9ad6;
+        border: 1px solid rgba(13, 13, 13, 0.125);
+    }
+    .list-first-item{
+        background-color: #015b86;
+    }
+    .list-group-item a{
+        color: white;
+        width: 100%;
+        text-align: left;
+    }
+    .client-menu-item{
+        display: none;
+    }
+    .client-top-menu{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .mobile-menu-icon{
+        font-size: 26px;
+    }
+    .application-description{
+        padding-left: 15px;
+    }
+    .application-desc-text strong{
+        font-size: 24px;
+    }
+    .receive-password-wrapper{
+        text-align: left;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px){
+    .mobile-menu-functions{
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 3;
+        height: 100%;
+        background-color: #1e9ad6;
+    }
+    .mobile-menu-functions img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    .list-group-item{
+        color: white;
+        background-color: #1e9ad6;
+        border: 1px solid rgba(13, 13, 13, 0.125);
+    }
+    .list-first-item{
+        background-color: #015b86;
+    }
+    .list-group-item a{
+        color: white;
+        width: 100%;
+        text-align: left;
+    }
+    .client-menu-item{
+        display: none;
+    }
+    .client-top-menu{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .mobile-menu-icon{
+        font-size: 26px;
+    }
+    .application-description{
+        padding-left: 15px;
+    }
+    .application-desc-text strong{
+        font-size: 24px;
+    }
+    .receive-password-wrapper{
+        text-align: left;
+    }
+    .client-menu-item{
+        display: none;
+    }
+    .client-top-menu{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .client-top-menu{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .mobile-menu-functions{
+        display: none;
+    }
+
+    .mobile-menu-icon{
+        display: none;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .mobile-menu-functions{
+        display: none;
+    }
+    .client-top-menu{
+        padding-left: 15%;
+        padding-right: 17%;
+    }
+    .mobile-menu-icon{
+        display: none;
+    }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .mobile-menu-functions{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: none;
+    }
+}

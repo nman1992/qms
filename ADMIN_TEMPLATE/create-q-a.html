@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADMIN AUTHENTICATION</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/form-elements.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/common-style.css">
+    <link rel="stylesheet" href="assets/css/reply-issues.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <![endif]-->
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+</head>
+
+<body>
+    <div id="update-admin-light-box" class="light-box">
+        <div class="col-lg-6 col-xs-12 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2 panel panel-success 
+            update-admin-dialog" id="reset-password-ensurance-dialog">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    Issues Management
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="col-xs-12 block-menu-wrapper update-admin-infor-wrapper">
+                    <div class="col-xs-12 container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the header including menu -->
+    <header id="header" class="admin-header">
+        <nav class="navbar navbar-inverse" id="desktop-menu-id">
+            <div class="container-fluid">
+                <div class="navbar-header header-inside-wrapper">
+                    <div class="admin-header-logo">
+                        <a class="navbar-brand" href="#">
+                            <img alt="Brand" src="assets/img/admin.ico" width="30" height="30">
+                        </a>
+                        <p class="navbar-brand navbar-left header-inside-text logo-text">ADMIN</p>
+                    </div>
+                    <div class="glyphicon glyphicon-menu-hamburger" id="mobile-menu"></div>
+                    <p class="navbar-brand navbar-right header-inside-text menu-app-function">Hello
+                        <a href="#" class="navbar-link navbar-name">Minh An</a> |
+                        <a href="admin-management.html" class="navbar-link navbar-other-link">My Account</a> |
+                        <a href="#" class="navbar-link navbar-other-link">Logout</a>
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <ul class="list-group mobile-menu-functions" id="mobile-menu-functions-id">
+            <li class="list-group-item"><img alt="Brand" src="assets/img/admin.ico" width="30" height="30"></li>
+            <li class="list-group-item" id="back-to-previous-screen">Back</li>
+            <li class="list-group-item">My Account</li>
+            <li class="list-group-item">Logout</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </header>
+    <!-- /header -->
+    <div class="">
+        <main class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 
+                panel panel-success format-bootstrap-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Create Q&A</h3>
+            </div>
+            <div class="panel panel-body col-xs-12 block-menu-wrapper">
+                <div class="col-lg-3 col-md-3 col-sm-0 col-xs-12">
+                    <div class="list-group" id="issue-management-sidebar">
+                        <a href="#" class="list-group-item active">
+                            Create New Q&A
+                            <span class="glyphicon glyphicon-chevron-down collapse-item-mobile" id="display-side-bar-mobile"> </span>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action hidden-list-item">All Q&A (20) </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-md-12 col-xs-12 format-bootstrap-default">
+                        <a href="issue-management.html" class="btn btn-success">Save</a>
+                        <a href="issue-management.html" class="btn btn-primary">Publish</a>
+                        <a href="issue-management.html" class="btn btn-default">Back to the list issue</a>
+                    </div>
+                    <div class="col-xs-12 format-bootstrap-default">
+                        <textarea name="issueQuestion" id="inputIssueQuestion" class="col-xs-12 form-control txt-area" rows="3">
+                        </textarea>
+                        <textarea name="issueAnswer" id="inputIssueQuestion" class="col-xs-12 form-control txt-area" rows="10">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 custom-pagination-wrapper">
+                    <nav class="col-xs-12 custom-pagination" aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+    </footer>
+    <!-- Javascript -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#mobile-menu").click(function() {
+            $("#mobile-menu-functions-id").slideDown("fast");
+            $("#desktop-menu-id").slideUp("fast");
+        });
+
+        $("#back-to-previous-screen").click(function() {
+            $("#mobile-menu-functions-id").slideUp("fast");
+            $("#desktop-menu-id").slideDown("fast");
+        });
+        $("#go-to-update-admin").click(function() {
+            $("#update-admin-light-box").slideDown("fast");
+        });
+        $("#display-side-bar-mobile").click(function(){
+            if ($(this).hasClass("glyphicon-chevron-down")) {
+                $(this).removeClass("glyphicon-chevron-down");
+                $(this).addClass("glyphicon-chevron-up");
+                $(".hidden-list-item").addClass("show");
+            }else{
+                $(this).removeClass("glyphicon-chevron-up");
+                $(this).addClass("glyphicon-chevron-down");
+                $(".hidden-list-item").removeClass("show");
+            }
+        });
+    });
+    </script>
+    <!-- <script src="assets/js/scripts.js"></script> -->
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+</body>
+
+</html>

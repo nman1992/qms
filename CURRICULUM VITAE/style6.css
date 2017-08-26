@@ -1,0 +1,273 @@
+.my-ctner{
+	margin: 10px auto;
+	padding: 0px;
+}
+
+header{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.55);
+}
+
+.h-bg{
+	background: red;
+	height: 50%;
+	width: 100%;
+	background: url("mybg.jpg");
+	background-size: 100% 200%;
+    background-position: 0px -172px
+}
+
+.h-content{
+	display: flex;
+    justify-content: center;
+    height: 65%;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+}
+ 
+.h-content_ele{
+	position: relative;
+    width: 100%;
+}
+
+.my-ava-wrper{
+	display: flex;
+	justify-content: center; 
+}
+
+.my-avatar{
+	background: url(girl.jpg);
+	background-size: 100%;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	height: 150px;
+	width: 150px;
+	/* border-radius: 90px; */
+}
+
+.h-space{
+	/* background: yellow; */
+	width: 100%;
+	height: 50%;
+}
+
+.my-desc{
+	height: 138px;
+}
+
+.my-desc__right{
+	height: 100%;
+}
+
+.my-desc__left{
+	height: 100%;
+}
+
+.my-desc__item{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background-color: green; */
+}
+
+.my-desc__item i{
+	margin-right: 10px;
+	margin-left: 20px;
+}
+
+.my-name, .my-job, .my-address, .my-passion{
+	display: flex;
+	justify-content: center;
+}
+
+.my-name{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.my-passion{
+	position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0px;
+    margin-top: 1rem;
+    /* padding-top: 20px; */
+    /* margin-bottom: 1rem; */
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.my-passion__left{
+	width: 10%;
+    float: left;
+    height: 100%;
+    font-size: 30px;
+    color: #3b0155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-passion__center{
+	width: 80%;
+	height: 100%;
+	padding-top: 2%;
+	text-align: center;
+	font-size: 15px;
+	border-bottom: 5px solid #3b0155;
+	font-family: 'PT Serif', serif;
+}
+
+.my-passion__right{
+	width: 10%;
+    float: left;
+    height: 100%;
+    font-size: 30px;
+    color: #3b0155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Body */
+
+.body-section{
+	width: 100%;
+	position: relative;
+	margin-top: 20px;
+	 display: inline-block; 
+	-webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.55);
+}
+
+.ex-title{
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 15px; 
+	position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.ex-item-wrper{
+	width: 100%;
+	position: relative;
+}
+
+.ex-item-left{
+	width: 49%;
+	float: left; 
+	margin-right: 1%; 
+}
+
+.ex-item-right{
+	width: 49%;
+	float: left; 
+	margin-left: 1%; 
+}
+
+.ex-item{
+	width: 90%;
+	height:250px;
+	margin: 5%;
+	border: 1px solid rgba(0,0,0,0.1);
+	padding: 2%;
+}
+
+.company-image{
+	width: 30%;
+	height: 70%;
+	float: left;
+	background: url(girl.jpg);
+	background-size: 100% 100%;
+	background-position: 0px 0px;
+}
+
+.company-details{
+	width: 70%;
+	height: 100%;
+	float: left;
+	/* background-color: green; */
+	position: relative;
+}
+
+.company-name{
+	width: 100%;
+	height: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+.company-period{
+	color: gray;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.company-job-desc{
+	position: absolute;
+	bottom: 0px; 
+	padding-left: 10px;
+}
+
+@media screen and (max-width: 800px){
+	.ex-item-left, .ex-item-right{
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+/* skills */
+
+.skill-item_left{
+	width: 49%;
+	margin-right: 1%;
+	float: left;
+}
+
+.skill-item_right{
+	width: 49%;
+	margin-left: 1%;
+	float: left;
+}
+/* 
+.skill-item_block{
+	width: 100%;
+	height: 50px;
+	background-color: yellow;
+} */
+
+.sk-title{
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 15px; 
+	position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.skill-item_block{
+	width: 90%;
+	height: 100%;
+	margin: 5%;
+	border: 1px solid rgba(0,0,0,0.1);
+	padding: 2%;
+}
+
+.last{
+	margin-bottom: 50px;
+}

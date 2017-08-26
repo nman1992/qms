@@ -1,0 +1,132 @@
+.user-side-bar{
+	height: 1000px;
+    background-color: #1d89bd;
+}
+
+.unique-key-wrapper{
+	background-color: #4c4d4d;
+    border: 2px solid #06e8f6;
+}
+
+.features-block{
+    min-height: 800px;
+    background-color: #f8f5f5;
+}
+
+.feature-item{
+	/*background-color: #212222;*/
+	background-color: #1d89bd;
+}
+
+.feature-item:hover{
+	color: #f0f8ff !important;
+	background-color: #89d5ef !important;
+}
+
+.break-line{
+	border-top: 1px solid #726e6e;
+}
+.feature-content-wrapper{
+	background-color: white;
+    /*border: 1px solid #6d7c84*/
+}
+.user-feature-icon:hover{
+	cursor: pointer;
+}
+
+.hiden-in-desktop{
+	display: none;
+}
+
+.user-image{
+	width: 80px;
+	height: 80px;
+}
+
+.upgrade-item-block{
+	cursor: pointer;
+}
+
+.input-group-addon{
+	width: 25px;
+}
+
+.date>input{
+	font-size: 13px;
+}
+
+.top-border-solid{
+	/*border-top: 1px solid #1d89bd;*/
+}
+
+@media screen and (min-width: 992px){
+	.client-top-menu{
+		background-color: #015b86;
+		padding: 0px 0px;
+	}
+}
+
+@media screen and (max-width: 576px){
+	.user-side-bar{
+		height: 100%;
+	    background-color: #1d89bd;
+	    position: fixed;
+	    z-index: 4;
+	    top: 0px;
+	    display: none;
+	}
+	.list-first-item img{
+		width: 32px;
+		height: 32px;
+		margin-right: 5px;
+	}
+	.user-image{
+		width: 80px !important;
+		height: 80px !important;
+	}
+	.checkbox-button-wrapper{
+		width: 33.3333%;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+	.user-side-bar{
+		height: 100%;
+	    background-color: #1d89bd;
+	    position: fixed;
+	    z-index: 4;
+	    top: 0px;
+	    display: none;
+	}
+	.client-menu-item{
+		display: none;
+	}
+	.list-first-item img{
+		width: 32px;
+		height: 32px;
+		margin-right: 5px;
+	}
+	.client-top-menu{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.mobile-menu-icon{
+		font-size: 26px;
+	}
+	.user-image{
+		width: 80px !important;
+		height: 80px !important;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.feature-item{
+		font-size: 13px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.selectboxit-container .selectboxit{
+		width: 150px;
+	}
+}

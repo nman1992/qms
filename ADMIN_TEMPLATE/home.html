@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ADMIN AUTHENTICATION</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/home.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <![endif]-->
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+    </head>
+    <body>
+        <!-- This is the header including menu -->
+        <header id="header" class="admin-header">
+            <nav class="navbar navbar-inverse" id="desktop-menu-id">
+                <div class="container-fluid">
+                    <div class="navbar-header header-inside-wrapper">
+                        <div class="admin-header-logo">
+                        <a class="navbar-brand" href="#">
+                            <img alt="Brand" src="assets/img/admin.ico" width="30" height="30">
+                        </a>
+                        <p class="navbar-brand navbar-left header-inside-text logo-text">ADMIN</p>
+                        </div>
+                        <div  class="glyphicon glyphicon-menu-hamburger" id="mobile-menu"></div>
+                        <p class="navbar-brand navbar-right header-inside-text menu-app-function">Hello
+                            <a href="#" class="navbar-link navbar-name">Minh An</a> |
+                            <a href="admin-management.html" class="navbar-link navbar-other-link">My Account</a> |
+                            <a href="#" class="navbar-link navbar-other-link">Logout</a>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+            <ul class="list-group mobile-menu-functions" id="mobile-menu-functions-id">
+              <li class="list-group-item"><img alt="Brand" src="assets/img/admin.ico" width="30" height="30"></li>
+              <li class="list-group-item" id="back-to-previous-screen">Back</li>
+              <li class="list-group-item">My Account</li>
+              <li class="list-group-item">Logout</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </header>
+        <!-- /header -->
+        <div>
+            <main class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 panel panel-success admin-content-wrapper">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Menu</h3>
+                </div>
+                <div class="col-xs-12 block-menu-wrapper">
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11 menu-block" role="alert">
+                        <span class="glyphicon glyphicon-user menu-item"></span>
+                        <a href="user-management.html">QUẢN LÝ NGƯỜI DÙNG</a>
+                        <p class="menu-description">This is a long description about the feature of menu item that show users what the feature is</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11 menu-block" role="alert">
+                        <span class="glyphicon glyphicon-cog menu-item"></span>
+                        <a href="application-management.html">QUẢN LÝ ỨNG DỤNG</a>
+                        <p class="menu-description">This is a long description about the feature of menu item that show users what the feature is</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11 menu-block" role="alert">
+                        <span class="glyphicon glyphicon-th-large menu-item"></span>
+                        <a href="issue-management.html">ISSUE TRACKER</a>
+                        <p class="menu-description">This is a long description about the feature of menu item that show users what the feature is</p>
+                    </div>
+                <!-- </div>
+                <div class="col-xs-12 block-menu-wrapper"> -->
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11 menu-block" role="alert">
+                        <span class="glyphicon glyphicon-file menu-item"></span>
+                        <a href="document-management.html">QUẢN LÝ TÀI LIỆU</a>
+                        <p class="menu-description">This is a long description about the feature of menu item that show users what the feature is</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11 menu-block" role="alert">
+                        <!-- <span class="glyphicon glyphicon-th-large menu-item"></span> -->
+                        <span class="glyphicon glyphicon-tree-conifer menu-item"></span>
+                        <a href="q-a-management.html">QUẢN LÝ Q&A</a>
+                        <p class="menu-description">This is a long description about the feature of menu item that show users what the feature is</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11 menu-block" role="alert">
+                        <span class="glyphicon glyphicon-edit menu-item"></span>
+                        <a href="#">CẬP NHẬT FORM THÔNG TIN EMAIL</a>
+                        <p class="menu-description">This is a long description about the feature of menu item</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer>
+        </footer>
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".menu-block").slideDown("normal");
+            });
+            $("#mobile-menu").click(function(){
+                $("#mobile-menu-functions-id").slideDown("fast");
+                $("#desktop-menu-id").slideUp("fast");
+            });
+
+            $("#back-to-previous-screen").click(function(){
+                $("#mobile-menu-functions-id").slideUp("fast");
+                $("#desktop-menu-id").slideDown("fast");
+                
+            });
+
+        </script>
+        <!-- <script src="assets/js/scripts.js"></script> -->
+        <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+    </body>
+</html>
+

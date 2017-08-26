@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HOME</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="assets/css/form-elements.css"> -->
+        <link rel="stylesheet" href="assets/css/common-style.css">
+        <link rel="stylesheet" href="assets/css/checkbox-style.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/home-page.css">
+        <link rel="stylesheet" href="assets/css/orange.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <![endif]-->
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+    </head>
+    <body>
+        <div class="light-box" id="reset-password-success-dialog">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-lg-offset-3 col-md-offset-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h4>Password sent successfully</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>We have sent the link for resetting password to your email. Please check it out.</p>
+                        <div class="d-xl-flex justify-content-end">
+                            <button type="button" class="btn btn-primary px-5 py-3 font-size-13" id="close-receive-password-dialog">OK</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- This is the header including menu -->
+        <header id="header" class="admin-header">
+            <div class="d-flex justify-content-around client-top-menu">
+              <div class="p-3 align-middle"><a class="go-home" href="#"><img src="assets/img/presenting-image.png" /></a></div>
+              <div class="mr-auto p-3"><a class="go-home" href="#"><strong>CMC Resource Protector</strong></a></div>
+              <div class="p-3 client-menu-item"><a class="signin-link" href="#">Sign In</a></div>
+              <div class="p-3 client-menu-item"><a class="signup-link" href="#">Sign Up</a></div>
+              <div class="p-3 client-menu-item"><a href="#">Service</a></div>
+              <div class="p-3 client-menu-item"><a href="#">About</a></div>
+              <div class=""><span class="p-3 glyphicon glyphicon-menu-hamburger mobile-menu-icon" id="display-menu-mobile"></span></div>
+            </div>
+            <!-- </div> -->
+            <ul class="list-group mobile-menu-functions" id="mobile-menu-functions-id">
+              <li class="list-group-item list-first-item"><img src="assets/img/presenting-image.png" /><strong>CMC Resource Protector</strong></li>
+              <li class="list-group-item"><a class="signin-link" href="#">Sign In</a></li>
+              <li class="list-group-item"><a class="signup-link" href="#">Sign Up</a></li>
+              <li class="list-group-item"><a href="#">Service</a></li>
+              <li class="list-group-item"><a href="#">About</a></li>
+              <li class="list-group-item" id="back-to-previous-screen"><a href="#">Back</a></li>
+            </ul>
+        </header>
+        <!-- /header -->
+        <div class="container-fluid service-image-portion feature-portion">
+            <section class="col-lg-6 col-md-6 col-sm-12 col-xs-12 image-block">
+                
+            </section>
+            <section class="col-lg-6 col-md-6 col-sm-12 col-xs-12 application-description">
+                <br/>
+                <h1 class="text-left application-desc-text"><strong>CMC Resource Protector</strong></h1>
+                <br/>
+                <h4 class="text-left"><span class="glyphicon glyphicon-ok feature-stick-icon"></span> Bảo vệ tài nguyên của hệ thống</h4>
+                <h4 class="text-left"><span class="glyphicon glyphicon-ok feature-stick-icon"></span> Theo dõi lịch sử, thông tin truy xuất</h4>
+                <h4 class="text-left"><span class="glyphicon glyphicon-ok feature-stick-icon"></span> This is the super vip software, that no one is better</h4>
+            </section>
+        </div>
+        <div class="container-fluid feature-portion hidden-portion" id="signin-portion">
+            <section class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 signin-form-wrapper text-left">
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+                        <h3 class="white-text-color"><strong>Login</strong></h3>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <a href="#"><img alt="Facebook" src="assets/img/facebook-icon.png" width="32px" height="32px" /></a>
+                        
+                        <a href="#"><img alt="Facebook" src="assets/img/google-icon.ico" width="32px" height="32px" /></a>
+                    </div>
+                    <div class="col-xs-12"><hr class="login-line-space" /></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control input-font-size" id="exampleInputEmail1" name="emailAddress" 
+                            placeholder="Enter email">
+                        <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control input-font-size" id="exampleInputPassword1" name="password" placeholder="Password">
+                        <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 checkbox-manage-application-wrapper">
+                        <!-- Checkbox to select what admin is gonna search by -->
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 checkbox-button-wrapper">
+                            <input tabindex="11" type="checkbox" id="square-radio-1" name="square-radio">
+                            <label for="square-radio-1">Remember Me</label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 pt-2 receive-password-wrapper">
+                            <a class="green-text-color" id="receive-password-link" href="#"><span class="glyphicon glyphicon-flash"></span> Receive Password</a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 mt-3">
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary mr-4 pl-5 pr-5 font-size-13">Login</button>
+                            <button type="button" class="btn btn-danger ml-4 p-3 font-size-13">Login As Anonymous</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 mt-4">
+                        <p class="text-center">You don't have an account? <a class="green-text-color signup-link" href="#">Sign Up</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container-fluid feature-portion hidden-portion"
+                id="receive-password-portion">
+            <section class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 signin-form-wrapper text-left">
+                <form id="receive-password-form" method="POST" action="#" accept-charset="utf-8">
+                    <div class="col-xs-12">
+                        <div class="col-xs-4">
+                            <h3 class="white-text-color"><strong>Receive Password</strong></h3>
+                        </div>
+                        <div class="col-xs-12"><hr class="login-line-space" /></div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                        <div class="form-group">
+                            <span for="exampleInputEmail1">Email address</span>
+                            <input type="email" class="form-control input-font-size" id="exampleInputEmail1" name="emailAddress" 
+                            placeholder="Enter email">
+                            <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                        </div>
+                        <div class="col-xs-12 mt-3">
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary mr-4 pl-5 pr-5 font-size-13">Receive Password</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="container-fluid feature-portion hidden-portion"
+                id="enter-reset-codes">
+            <section class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 signin-form-wrapper text-left">
+                <form id="receive-password-form" method="POST" action="#" accept-charset="utf-8">
+                    <div class="col-xs-12">
+                        <div class="col-xs-4">
+                            <h3 class="white-text-color"><strong>Enter Reset Code</strong></h3>
+                        </div>
+                        <div class="col-xs-12"><hr class="login-line-space" /></div>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                        <div class="form-group">
+                            <span for="exampleInputEmail1">Reset Code</span>
+                            <input type="email" class="form-control input-font-size" id="exampleInputEmail1" name="emailAddress" 
+                            placeholder="Enter email">
+                            <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                        </div>
+                        <div class="col-xs-12 mt-3">
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary mr-4 pl-5 pr-5 font-size-13">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="container-fluid feature-portion hidden-portion" id="signup-portion">
+            <section class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 signup-form-wrapper text-left">
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+                        <h3 class="white-text-color"><strong>Sign Up</strong></h3>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <a href="#"><img alt="Facebook" src="assets/img/facebook-icon.png" width="32px" height="32px" /></a>
+                        
+                        <a href="#"><img alt="Facebook" src="assets/img/google-icon.ico" width="32px" height="32px" /></a>
+                    </div>
+                    <div class="col-xs-12"><hr class="login-line-space" /></div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="Name" class="form-control input-font-size" id="exampleInputEmail1" name="emailAddress" 
+                            placeholder="Enter your fullname here..">
+                        <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control input-font-size" id="exampleInputEmail1" name="emailAddress" 
+                            placeholder="Enter email">
+                        <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control input-font-size" id="exampleInputPassword1" name="password" placeholder="Password">
+                        <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Confirm Password</label>
+                        <input type="password" class="form-control input-font-size" id="exampleInputPassword1" name="confirmPassword"
+                         placeholder="Password">
+                         <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Address</label>
+                        <input type="password" class="form-control input-font-size" id="exampleInputPassword1" name="address" placeholder="Password">
+                        <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Phone</label>
+                        <input type="password" class="form-control input-font-size" id="exampleInputPassword1" name="phone" placeholder="Password">
+                        <p class="yellow-text-color isUnavailable error-text">This line is to display error or things like that.</p>
+                    </div>
+                    <div class="col-xs-12 mt-3">
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-success mr-4 pt-3 pb-3 pl-5 pr-5 font-size-13">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container-fluid service-description">
+            <section class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2">
+                <h2 class="text-left"><strong>How we help to protect your resources</strong></h2>
+                <p class="text-left">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+            </section>
+        </div>
+        <footer class="col-xs-12">
+        </footer>
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/js/icheck.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/menu-script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*$(".menu-block").slideDown("normal");*/
+                $("#display-menu-mobile").click(function(){
+                    $("#mobile-menu-functions-id").slideDown("fast");
+                });
+
+                $("#back-to-previous-screen").click(function(){
+                    $("#mobile-menu-functions-id").slideUp("fast");
+                    $("#desktop-menu-id").slideDown("fast");
+                    
+                });
+                $('.checkbox-button-wrapper input').iCheck({
+                    checkboxClass: 'icheckbox_square-orange',
+                    radioClass: 'iradio_square-orange',
+                    increaseArea: '20%'
+                });
+            });
+            
+
+        </script>
+        <!-- <script src="assets/js/scripts.js"></script> -->
+        <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+    </body>
+</html>
+

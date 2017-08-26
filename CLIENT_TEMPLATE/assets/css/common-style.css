@@ -1,0 +1,146 @@
+body{
+    background-color: #1e9ad6;
+}
+footer{
+    height: 50px;
+    background-color: #272723;
+}
+.light-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 3;
+    padding-top: 100px;
+    display: none;
+}
+.my-selection{
+	background-color: #d0fdc9;
+    padding: 5px;
+    border-radius: 0px;
+}
+
+.my-radio-button{
+	border: 1px solid green;
+    background-color: #d0fdc9;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    display: inline-block;
+    position: relative;
+}
+
+.my-radio-stick{
+	margin-left: 0px;
+    font-size: 12px;
+    position: absolute;
+    top: 4px;
+    color: green;
+    left: 5px;
+    display: none;
+}
+
+.lbl-my-radio{
+	float:left;
+	text-align: left;
+	width: 100%;
+}
+
+.lbl-radio-text{
+	position: absolute;
+    top: -4px;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.my-radio-input{
+	display: none;
+}
+
+.custom-pagination-wrapper{
+    text-align: right;
+}
+
+.white-text-color{
+    color: #f0f8ff !important;
+}
+.yellow-text-color{
+    color: yellow !important;
+}
+.green-text-color{
+    color: #00ff09 !important;
+}
+.gray-text-color{
+    color: #888;
+}
+.red-text-color{
+    color: red !important;
+}
+.isUnavailable{
+    display: none;
+}
+.error-text{
+    font-size: 14px;
+}
+.text-underline{
+    text-decoration: underline;
+}
+
+.font-size-20{
+    font-size: 20px;
+}
+.font-size-14{
+    font-size: 14px;
+}
+
+.font-size-13{
+    font-size: 13px !important;
+}
+
+.my-blue-button{
+    background-color: #1d89bd;
+    color:  #f0f8ff;
+    border-radius: 0px;
+}
+.my-red-button{
+    background-color: #a63613;
+    color:  #f0f8ff;
+    border-radius: 0px;
+}
+
+.my-green-button{
+    background-color: #1dbd78;
+    color:  #f0f8ff;
+    border-radius: 0px;
+}
+
+.my-gray-button{
+    background-color: #919593;
+    color:  #f0f8ff;
+    border-radius: 0px;
+}
+
+.hidden-portion{
+    display: none;
+}
+
+.feature-item{
+
+}
+
+.text-wrap{
+    word-wrap: break-word;
+}
+
+.unselectable-element{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+
+.background-color-yellow{
+    background-color: yellow !important;
+    background-image: none !important;
+    color: #2e2e2d !important;
+}

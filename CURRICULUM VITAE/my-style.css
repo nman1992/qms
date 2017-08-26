@@ -1,0 +1,178 @@
+body{
+	background: url(web-bg.jpg);
+}
+.cont-wrper{
+	background: white;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.head-wraper{
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	border-bottom: 1px solid green;
+}
+
+/* Section */
+.m-section{
+	width: 100%;
+	height: 400px;
+	border-bottom: 1px solid white;
+}
+
+.m-section:first-child{
+	width: 100%;
+	height: 500px;
+	border-bottom: 1px solid white;
+}
+
+.my-info{
+	position: fixed;
+	right: -400px;
+	width: 400px;
+	background-color: white; 
+	top: 60px;
+	height: 500px;
+}
+
+.my-info ul{
+	padding: 0px;
+	display: block;
+	height: 100%;
+	margin: 0px;
+}
+
+.my-info__item{
+	height: 100px;
+	width: 200%;
+	display: block;
+	float: left;
+}
+
+/* head logo */
+.head-wraper__logo{
+	width: 30%;
+	float: left;
+	height: 100%;
+	position: relative;
+}
+
+/* For menu */
+.h-menu{
+	width: 70%;
+    float: right;
+    height: 100%;
+}
+
+.h-menu ul{
+	margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.h-menu__item{
+	display: block;
+    float: right;
+    height: 100%;
+    border-left: 1px solid #3b0155;
+}
+
+.h-menu__item a{
+	color: black;
+	width: 100%;
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.h-menu__item a:hover{
+	border-bottom: 6px solid #3b0155;
+	/* color: white; */
+}
+
+.first{
+	border-bottom: 6px solid #3b0155;
+}
+
+.basic-info i{
+	font-size: 20px;
+}
+
+
+/* Logo */
+
+.my-logo{
+	padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    height: 100%;
+    justify-content: center;
+    color: green;
+    font-family: 'Lobster', cursive;
+}
+
+
+.light-box{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: rgba(0,0,0,0.6);
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	display: none;
+}
+
+.login-form-wpr{
+	width: 40%;
+	height: 40%;
+	background-color: white;
+	position: fixed;
+	top: 10%;
+	left: 30%;
+	display: none;
+	z-index: 3;
+}
+
+.login-form__title{
+	border-bottom: 1px solid #3b0155;
+	padding-left: 20px;
+	color: gray;
+}
+
+.login-form__title_left{
+	display: inline-block;
+	width: 90%;
+}
+.login-form__title_right{
+	display: inline-block;
+	width: 7%;
+	text-align: right;
+	font-size: 17px;
+}
+
+.form-login{
+	padding-top: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+}
+
+.login-btn-wrp{
+	text-align: center;
+}
+
+.btn-login{
+	width: 40%;
+    background-color: #9136ba;
+    color: white;
+    font-size: 16px;
+}
